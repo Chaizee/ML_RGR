@@ -1,23 +1,3 @@
-import os
-import sys
-import subprocess
-
-def install_requirements():
-    requirements_file = "requirements.txt"
-
-    marker_file = ".requirements_installed"
-    
-    if os.path.exists(requirements_file) and not os.path.exists(marker_file):
-        try:
-            subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", requirements_file])
-
-            with open(marker_file, "w") as f:
-                f.write("done")
-        except Exception as e:
-            print(f"Ошибка при установке: {e}")
-
-install_requirements()
-
 import catboost as cb
 import joblib
 import matplotlib.pyplot as plt
