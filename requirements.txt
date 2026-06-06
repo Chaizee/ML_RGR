@@ -1,6 +1,6 @@
 catboost
 joblib
-matplotlib.pyplot
+matplotlib
 numpy
 pandas
 seaborn
